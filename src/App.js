@@ -10,6 +10,7 @@ import ForgetPassword from './Pages/Auth/ForgetPassword';
 import Login from './Pages/Auth/Login'
 import Register from './Pages/Auth/Register';
 import Verification from './Pages/Auth/Verification';
+import CompanyDetails from './Pages/Home/CompanyDetails';
 import Dashboard from './Pages/Home/Dashboard';
 import { RouteWrapper } from './routes/RouteWrapper'
 
@@ -25,13 +26,14 @@ function App() {
               <Route path={"/forgetPassword"} component={ForgetPassword} />
               <Route path={"/verification"} component={Verification} />
               <RouteWrapper path="/profile-details" exact component={Dashboard} layout={BaseLayout} />
-              <RouteWrapper path="/company-details" exact component={Dashboard} layout={BaseLayout} />
+              <RouteWrapper path="/company-details" exact component={CompanyDetails} layout={BaseLayout} />
               <RouteWrapper path="/report" exact component={Dashboard} layout={BaseLayout} />
               <RouteWrapper path="/" exact component={Dashboard} layout={BaseLayout} />
             </Switch>
           </Router>
         </ErrorBoundary>
       </Suspense>
+
     </>
   )
 }
