@@ -1,9 +1,9 @@
-const { default: axios } = require("axios");
-const { useState } = require("react");
-const { useHistory } = require("react-router-dom");
-const { toast } = require("react-toastify");
-const { default: API_URL } = require("./Api");
-
+import axios, { Axios } from "axios";
+import { useState } from "react";
+import { useHistory } from "react-router-dom";
+import { toast } from "react-toastify";
+import API_URL from "./Api";
+ 
 const UseApi = () => {
     const history = useHistory()
     const [isLoading, setIsLoading] = useState(false);
@@ -53,7 +53,7 @@ const UseApi = () => {
                 timeOut: 5000,
                 closeButton: true
             })
-            history.push('/')
+            history.push('/login')
 
         }
         catch (e) {
@@ -73,3 +73,4 @@ const UseApi = () => {
     }
     return { loginAction, isLoading, RegisterAction, error }
 }
+export default UseApi

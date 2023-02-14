@@ -2,10 +2,10 @@ import React from 'react'
 import { Anckor, Span } from '../../Style/elments'
 import { Flex } from '../../Style/layout'
 
-function Anckors({ text, name, href, color,justifyContent }) {
+function Anckors({ fontWeight, text, name, href, color,justifyContent ,marginLeft}) {
     return (
-        <Flex justifyContent={justifyContent}>
-            <Span>
+        <Flex  marginLeft={marginLeft}justifyContent={justifyContent}>
+            <Span fontWeight={fontWeight}>
                 {text}
             </Span>
             <Anckor color={color} href={href}>

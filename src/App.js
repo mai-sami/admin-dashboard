@@ -12,7 +12,7 @@ import Register from './Pages/Auth/Register';
 import Verification from './Pages/Auth/Verification';
 import Dashboard from './Pages/Home/Dashboard';
 import { RouteWrapper } from './routes/RouteWrapper'
-
+import './App.css'
 function App() {
   return (
     <>

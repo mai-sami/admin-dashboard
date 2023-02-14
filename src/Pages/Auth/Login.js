@@ -9,11 +9,16 @@ import Button from '../../Components/Buttons/Button';
 import Anckors from '../../Components/AnckorComponent/Anckors';
 import { Flex } from '../../Style/layout';
 import { yupResolver } from '@hookform/resolvers/yup';
+import UseApi from '../../Hooks/UseApi';
+import { ToastContainer } from 'react-toastify';
+import Spinner from '../../Components/Spinners/Spinner';
 
 function Login() {
     const { register, handleSubmit, getValues, formState: { errors } } = useForm({
         resolver: yupResolver(loginSchema)
     });
+    const { loginAction, isLoading } = UseApi()
+
     const onSubmit = () => {
         const email = getValues("email")
         const password = getValues("password")
@@ -21,9 +26,14 @@ function Login() {
             email,
             password,
         }
+
         console.log("nice", userData)
+        loginAction(userData)
     }
     return (
+        <>
+            <ToastContainer />
+{isLoading ? <Flex> <Spinner />  </Flex>:
         <Form onSubmit={handleSubmit(onSubmit)}>
             <Title name={"LOG IN"} />
             <InputForms
@@ -53,7 +63,6 @@ function Login() {
                     name={"Forgotpassword ?"}
                     color={"#000000"}
                     href={"/forgetPassword"} />
-
             <ErrorMessage>
                 {errors.password && <ErrorMessage>{errors.password.message}</ErrorMessage>}
             </ErrorMessage>
@@ -61,7 +70,7 @@ function Login() {
                 <Button
                     name={"LOG IN"}
                     margin={"2rem"}
-                />
+                    />
             </Flex>
             <Anckors
                 text={"Don’t have an account ?"}
@@ -70,6 +79,8 @@ function Login() {
                 href={"/register"} />
 
         </Form>
+}
+                </>
     )
 }
 

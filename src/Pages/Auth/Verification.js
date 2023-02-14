@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Anckors from '../../Components/AnckorComponent/Anckors';
 import Button from '../../Components/Buttons/Button';
 import Title from '../../Components/Titles/Title'
-import { Form } from '../../Style/elments'
+import { Anckor, Form, Li } from '../../Style/elments'
 import { Flex } from '../../Style/layout';
 
 function Verification() {
@@ -12,11 +12,22 @@ function Verification() {
     return (
         <Form >
             <Title name={"Verification"} />
-            
-            <Anckors
-                 name={"www.loremipsum.com"}
+            <>
+                <Li>
+                    You are sing up with this account please verify 
+                    <Anckors
+                    fontWeight={"500"}
+                    marginLeft={"1.5"}
+                    justifyContent={"left"}
+                text={"by this link"}
+                name={"www.loremipsum.com"}
                 color={"#FF0000"}
-                href={"/register"} />
+                href={"/www.loremipsum.com"} />
+                    {/* <Anckor color='#FF0000'>www.loremipsum.com</Anckor> */}
+                </Li>
+                <br></br>
+              
+            </>
             <Flex>
                 <Link to={"/"}>
                     <Button
