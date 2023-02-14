@@ -60,7 +60,7 @@ padding:${({ padding }) => padding || "1rem"};
 width:${({ width }) => width || "90%"};
 outline: none;
 margin-right:${({ marginRight }) => marginRight};
-margin:${({ margin }) => margin || ".6rem auto .3rem auto"};
+margin:${({ margin }) => margin || ".6rem auto .7rem auto"};
 `
 export const Anckor = styled.a`
 font-family: 'Inter';

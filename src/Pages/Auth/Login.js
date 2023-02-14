@@ -21,7 +21,7 @@ function Login() {
             email,
             password,
         }
-        console.log("dcd", userData)
+        console.log("nice", userData)
     }
     return (
         <Form onSubmit={handleSubmit(onSubmit)}>
@@ -47,6 +47,13 @@ function Login() {
                 name="password"
 
             />
+ 
+                <Anckors
+                justifyContent={"right"}
+                    name={"Forgotpassword ?"}
+                    color={"#000000"}
+                    href={"/forgetPassword"} />
+
             <ErrorMessage>
                 {errors.password && <ErrorMessage>{errors.password.message}</ErrorMessage>}
             </ErrorMessage>
