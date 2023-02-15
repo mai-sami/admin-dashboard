@@ -86,6 +86,8 @@ border: none;
 font-weight: ${({ fontWeight }) => fontWeight || "600"};
 border:${({ border }) => border};
 margin:${({ margin }) => margin};
+position:${({ position }) => position};
+cursor: pointer;
 `
 
 export const Li = styled.li`

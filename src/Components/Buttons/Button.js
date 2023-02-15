@@ -1,7 +1,9 @@
 import React from 'react'
 import { ButoonLogin } from '../../Style/elments'
 
-function Button({ onClick, margin, border, background, name, color, width, marginTop, padding, borderRuidus }) {
+function Button({ onClick, margin, border, background, 
+    name, color, width, marginTop, padding, borderRuidus , position
+ }) {
     return (
         
         <ButoonLogin
@@ -14,8 +16,11 @@ function Button({ onClick, margin, border, background, name, color, width, margi
             border={border}
             margin={margin}
             onClick={onClick}
+            position={position}
             type="submit"
-        >{name}</ButoonLogin>
+        >
+            {name}
+        </ButoonLogin>
     )
 }
 
