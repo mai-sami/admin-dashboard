@@ -4,7 +4,7 @@ export const RouteWrapper = ({ component: Component, layout: Layout, ...rest }) 
     <Route{...rest}
         render={(props) =>
             <Layout {...props}>
-                <Component {...props} />
+                <Component   {...props}  />
             </Layout>
         } />
 );

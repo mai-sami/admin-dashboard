@@ -2,11 +2,11 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import React from 'react'
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
-import Button from '../../Components/Buttons/Button';
-import ErrorMessage from '../../Components/ErrorMessages/ErrorMessage';
-import InputForms from '../../Components/INPUTandLabels/InputForms';
-import Title from '../../Components/Titles/Title'
-import { Form } from '../../Style/elments'
+import Button from '../../Components/atoms/Buttons/Button';
+import ErrorMessage from '../../Components/atoms/ErrorMessages/ErrorMessage';
+import Title from '../../Components/atoms/Titles/Title';
+ import InputForms from '../../Components/molecules/INPUTandLabels/InputForms';
+  import { Form } from '../../Style/elments'
 import { Flex } from '../../Style/layout';
 import { loginSchema } from './Validation';
 

@@ -1,13 +1,16 @@
-import Header from "../Components/Header";
-import Sidebar from "../Components/Sidebar";
+import Header from "../Components/molecules/Header";
+import Sidebar from "../Components/molecules/Sidebar";
+import { Flex } from "../Style/layout";
 
 export function BaseLayout({ children }) {
     return (
-        <>
-        <Header />
-        <Sidebar />
-            {children}
+        <Flex alignItems="start" justifyContent={"flex-start"}>
+            <Sidebar />
+            <Flex width={"100%"} flexDirection={"column"}>
+                <Header />
+                {children}
+            </Flex>
 
-        </>
+        </Flex>
     )
 }

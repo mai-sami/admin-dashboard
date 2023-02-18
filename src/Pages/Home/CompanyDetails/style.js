@@ -19,7 +19,6 @@ const ComapnyConatiner = styled.div`
     @media only screen and (max-width: 1142px) {
             width: 700px;       
     }
-
     @media only screen and (max-width: 900px) {
         width: 500px;
     }
@@ -37,7 +36,7 @@ const ComapnyConatiner = styled.div`
     }
     button{
         width: fit-content;
-        height: 40px;
+       
     }
 `;
 

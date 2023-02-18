@@ -1,6 +1,17 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.links {
+  text-decoration: none;
+  margin: 1rem 0 0.7rem 0;
+}
+
+.active {
+  font-weight: bolder !important;
+  font-size: 21px !important;
+  color: #000000 !important;
 
 }
