@@ -96,13 +96,21 @@ top: ${({ top }) => top};
 right: ${({ right }) => right};
 cursor: pointer;
   `
-
 export const Li = styled.li`
 font-size: 22px;
 line-height: 1.6;
-
 `
 export const Hr = styled.hr`
 width: 100%;
+`
+export const P = styled.p`
+ border-left: ${({ border }) => border};
+padding:1rem;
+ width:${({ width }) => width};
+ text-align: left;
+
+`
+export const Image = styled.img`
+ margin:.3rem;
 
 `

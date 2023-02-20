@@ -1,10 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Hr } from '../../../Style/elments'
-import { Flex } from '../../../Style/layout'
+ import { Flex } from '../../../Style/layout'
 import Button from '../Buttons/Button'
 
-function LineButton({ name,urls }) {
+function LineButton({ name,urls ,children}) {
     return (
         <Flex
             justifyContent={"right"}
@@ -19,7 +18,7 @@ function LineButton({ name,urls }) {
                     margin={"1rem"}
                 />
             </Link>
-            <Hr></Hr>
+           {children}
         </Flex>
     )
 }

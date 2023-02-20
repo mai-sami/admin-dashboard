@@ -1,3 +1,4 @@
+import { useLocation } from "react-router-dom";
 
 export const getUser = () => {
     return JSON.parse(localStorage.getItem('user') || '{}');
@@ -23,3 +24,4 @@ export const getUserRol = () => {
 export const isAdminRole = () => {
     return getUserRol() === true;
 }
+ 

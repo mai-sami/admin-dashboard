@@ -1,11 +1,10 @@
 import React from 'react'
 
-function List() {
+function Modal() {
     return (
         <>
-        List
         </>
     )
 }
 
-export default List
+export default Modal

@@ -8,7 +8,7 @@ function Dropdown({ show, options, text, handelShow, url }) {
     return (
         <>
             <Flex justifyContent={"space-between"}>
-                <CustomNavLinks name={text} url={`/${url}`} />
+                <CustomNavLinks name={text} url={`${url}`} />
 
                 {show ? <img src={open} alt="open" onClick={handelShow} />
                     :
@@ -20,8 +20,8 @@ function Dropdown({ show, options, text, handelShow, url }) {
                     alignItems={"left"}
                     justifyContent={"left"}
                     flexDirection={"column"}>
-                    {options.map((item) => (
-                   <CustomNavLinks name={item.name} url={item.link} />
+                    {options?.map((item) => (
+                        <CustomNavLinks name={item.name} url={item.link} />
                     ))}
                 </Flex>
                 : ""}

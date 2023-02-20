@@ -1,6 +1,6 @@
 import React from 'react'
-import { ErrorMess } from '../../../Style/other'
-
+import { ErrorMess } from '../../../Style/layout'
+ 
 function ErrorMessage({ children }) {
     return (
         <ErrorMess>

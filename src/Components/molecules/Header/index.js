@@ -7,8 +7,6 @@ function Index() {
     const location = useLocation();
     const getCurrentTitle = () => {
         switch (location.pathname) {
-            case "/":
-                return "Dashboard";
             case "/company-details":
                 return "Company Details";
             case "/profile-details":
@@ -33,6 +31,8 @@ function Index() {
                 return "Social";
             case "/governance":
                 return "Governance";
+                case "/":
+                return "Dashboard";
             default:
                 return "Add Name of Page in another case";
         }

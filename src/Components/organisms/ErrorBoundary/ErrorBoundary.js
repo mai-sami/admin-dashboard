@@ -1,4 +1,7 @@
 import React, { PureComponent } from 'react'
+import { Image } from '../../../Style/elments';
+import { Flex } from '../../../Style/layout';
+import notFound from '../../../assets/Group 491.png'
 
 class ErrorBoundary extends PureComponent {
     constructor(props) {
@@ -7,12 +10,10 @@ class ErrorBoundary extends PureComponent {
 
     }
     static getDerivedStateFromError(error) {
-        // Update state so the next render will show the fallback UI.
         return { hasError: true };
     }
 
     componentDidCatch(error, errorInfo) {
-        // You can also log the error to an error reporting service
         console.log(error, errorInfo);
     }
 
@@ -20,8 +21,15 @@ class ErrorBoundary extends PureComponent {
         if (this.state.hasError)
             return (
                 <>
-                    <h1>This Page is Broken</h1>
+                    <Flex
+                    margin={"6rem 0rem 0rem 0rem "}
+                        flexDirection={"column"}>
+                    <h1 style={{margin:"3rem",color:"#888226"}}>Something Is Error,Try Later</h1>
+                    <Image src={notFound} alt="notFound" />
+
+                        </Flex >
                 </>
+
             );
         return this.props.children;
     }

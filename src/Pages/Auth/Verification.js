@@ -1,8 +1,8 @@
- import React, { useState } from 'react'
+import React, { useState } from 'react'
 import Anckors from '../../Components/atoms/AnckorComponent/Anckors';
 import Button from '../../Components/atoms/Buttons/Button';
- import Title from '../../Components/atoms/Titles/Title';
-  import {Form, Li } from '../../Style/elments'
+import Title from '../../Components/atoms/Titles/Title';
+import { Form, Li } from '../../Style/elments'
 import { Flex } from '../../Style/layout';
 import Verified from './Verified';
 
@@ -14,7 +14,7 @@ function Verification() {
         setShow(!show)
     }
     return (
-        <Form >
+        <Form>
             <Title name={"Verification"} />
             <>
                 <Li>
@@ -27,7 +27,7 @@ function Verification() {
                         name={"www.loremipsum.com"}
                         color={"#FF0000"}
                         href={"/www.loremipsum.com"} />
-                 </Li>
+                </Li>
                 <br></br>
 
             </>

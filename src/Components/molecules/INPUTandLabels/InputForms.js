@@ -3,8 +3,7 @@ import { InputField, Labels } from '../../../Style/elments'
 import { DivElements } from '../../../Style/layout'
 import ErrorMessage from '../../atoms/ErrorMessages/ErrorMessage'
 
-function InputForms({ name, LineHeight, text, border, placeholder, type, margin, register, width, errors, ErrorName }) {
-    console.log(errors, "errors")
+function InputForms({ name, LineHeight, text, placeholder, type, margin, register, width, errors }) {
     return (
         <DivElements LineHeight={LineHeight}>
             <Labels >{text}</Labels>
@@ -14,11 +13,10 @@ function InputForms({ name, LineHeight, text, border, placeholder, type, margin,
                 placeholder={placeholder}
                 type={type}
                 margin={margin}
-                border={border}
+                border={errors[name] ? "red" : "#bababaa0"}
                 {...register(name)} />
             <ErrorMessage>
-                {errors?.name &&
-                    <ErrorMessage>{errors?.name.message}</ErrorMessage>}
+                {errors[name] && <ErrorMessage>{errors[name].message}</ErrorMessage>}
             </ErrorMessage>
         </DivElements>
     )

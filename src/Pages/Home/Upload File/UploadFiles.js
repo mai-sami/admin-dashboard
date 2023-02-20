@@ -18,12 +18,11 @@ function UploadFiles() {
         setUpload(true);
     };
 
-
     return (
 
         <Flex width={"95%"} flexDirection={"column"} alignItems={"flex-start"}>
             <Tab upload={upload} show={show} handelShow={handelShow} toggleTab={toggleTab} />
-            <Flex margin={"1rem 0 0 0"} alignItems={"flex-start"}  justifyContent={"space-between"}>
+            <Flex width={"100%"} margin={"1rem 0 0 0"} alignItems={"flex-start"}  justifyContent={"space-between"}>
                 {show ?
                     <>
                         <Manual />
