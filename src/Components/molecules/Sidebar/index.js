@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
- import { DataSidebar, ListAnalytics, ListReportSidebar } from '../../../Mock/mock'
+import { Link } from 'react-router-dom'
+import { DataSidebar, ListAnalytics, ListReportSidebar } from '../../../Mock/mock'
 import Button from '../../atoms/Buttons/Button'
 import CustomNavLinks from '../../atoms/CustomNavLink/CustomNavLinks'
 import Dropdown from '../../atoms/DropdownComponent/Dropdown'
@@ -20,6 +21,7 @@ function Index() {
     }
     return (
         <Sidebar>
+            <Link to={"/login"}>
             <Button
                 name={"LOGO HERE"}
                 margin={"1rem 1rem 4rem 1rem"}
@@ -28,12 +30,13 @@ function Index() {
                 background={"#D9D9D9"}
                 height={"60px"}
                 onClick={LogOut}
-            />
+                />
+                </Link>
             {DataSidebar.map(item => (
                 <CustomNavLinks name={item.name} url={`${item.link}`} />
             ))}
             <Dropdown text={"Report"} url={"/report"} show={showReport} handelShow={handelShowReports} options={ListReportSidebar} />
-            <Dropdown text={"Analytics"} url={"/Analytics"} show={show} handelShow={handelShow} options={ListAnalytics} />
+            <Dropdown text={"Analytics"} url={"/analytics"} show={show} handelShow={handelShow} options={ListAnalytics} />
 
         </Sidebar>
     )

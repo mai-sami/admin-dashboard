@@ -7,8 +7,7 @@ import { Form } from '../../../Style/elments'
 import { Div } from '../../../Style/layout';
 import * as yup from "yup";
 import Title from '../../atoms/Titles/Title';
-import { Link } from 'react-router-dom';
-
+ 
 function CustomInputForms({
     nameButton, border,
     TitleName, widthForm,
@@ -60,12 +59,10 @@ function CustomInputForms({
                 {children}
                 <Div width={"100%"}
                     display={"flex"}>
-                    <Link to={url}>
                         <Button
                             name={nameButton}
                             margin={"2rem"}
                         />
-                    </Link>
                 </Div>
                 {AnckorText}
             </Form>

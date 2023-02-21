@@ -1,10 +1,11 @@
 import React from 'react'
-import '../../App.css'
-function Dashboard() {
+import Chart from '../../Components/organisms/Charts/Chart'
+import { DashboardCharts } from '../../Mock/mock'
 
+function Dashboard() {
     return (
         <>
-
+      <Chart DataCharts={DashboardCharts} />
         </>
     )
 }

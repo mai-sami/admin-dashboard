@@ -4,7 +4,7 @@ import notFound from '../assets/Group 491.png'
 import Button from '../Components/atoms/Buttons/Button'
 import { Image } from '../Style/elments'
 import { Flex } from '../Style/layout'
-function NotFound(props) {
+function NotFound() {
     const history = useHistory()
     return (
         <Flex

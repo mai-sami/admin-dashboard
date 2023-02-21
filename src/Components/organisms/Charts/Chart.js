@@ -1,12 +1,20 @@
 import React from 'react'
-import chart from '../../../assets/Group 17.png'
-import { Div } from '../../../Style/layout'
-function Chart() {
+import {Flex } from '../../../Style/layout'
+import Title from '../../atoms/Titles/Title'
+function Chart({ DataCharts }) {
     return (
-        <Div width={"80%"} display={"flex"} justifyContent={"space-between"}>
-        <img src={chart} alt="chart" />
-        <img src={chart} alt="chart" />
-        </Div>
+        <Flex margin={"2rem auto auto auto"}
+            flexWrap={"wrap"}
+            width={"90%"}
+            display={"flex"}
+            justifyContent={"space-between"}>
+            {DataCharts?.map(item => (
+                <Flex alignItems={"flex-start"} flexDirection={"column"}>
+                    <Title margin={'1'} name={item.name} />
+                    <img style={{ width: "100%" }} src={item.image} alt="chart" />
+                </Flex>
+            ))}
+        </Flex>
     )
 }
 

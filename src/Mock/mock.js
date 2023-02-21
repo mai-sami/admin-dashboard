@@ -1,4 +1,8 @@
 import * as yup from "yup";
+import chart1 from '../assets/chart1.png'
+import chart2 from '../assets/chart2.png'
+import chart3 from '../assets/chart3.png'
+import chart4 from '../assets/Group 17.png'
 
 const LoginDataFeild = [
     { text: "Email ID", type: "email", name: "email", placeholder: "Enter Email ID", yup: yup.string().required("Please enter your email").email("Please enter a valid email") },
@@ -90,7 +94,16 @@ const ListDatas = [
     "	Whether shares listed on recognized Stock Exchange(s):", "Authorised Capital	"
     , "Paid Up Capital"]
 
-
+const DashboardCharts=[
+  {  name:"Chart1",image:chart1},
+  {  name:"Chart2",image:chart2},
+  {  name:"Chart3",image:chart3},
+]
+const AnalyticsCharts=[
+    {  name:"Chart1",image:chart1},
+    {  name:"Chart2",image:chart4},
+    {  name:"Chart3",image:chart3},
+  ]
 // Table Data Page
 const HeaderTable = ["Report1", "Report2", "Report3", "Report4", "Report5", "Report6", "Actions"]
 const TableDataBody = [
@@ -105,7 +118,7 @@ const TableDataBody = [
 ]
 
 export {
-    DataSidebar, RegisterDataFeild, LoginDataFeild, CompanyDetailsData,ForgetPasswordFeild,
+    DataSidebar,DashboardCharts,AnalyticsCharts, RegisterDataFeild, LoginDataFeild, CompanyDetailsData,ForgetPasswordFeild,
     DataCreatFeildProfile, ListAnalytics, ListReports, ListData, ReportsDataFeildManual,
     CreateReportsDataFeilds, ListDatas, ListReportSidebar, TableDataBody, HeaderTable
 };
