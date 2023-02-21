@@ -33,6 +33,9 @@ function Index() {
                 return "Governance";
                 case "/":
                 return "Dashboard";
+                case "/transfer-list":
+                    return "Transfer List";
+                
             default:
                 return "Add Name of Page in another case";
         }

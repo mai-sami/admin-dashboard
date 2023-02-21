@@ -10,6 +10,7 @@
     "axios": "^1.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-dual-listbox": "^5.0.2",
     "react-hook-form": "^7.43.1",
     "react-loader-spinner": "^5.3.4",
     "react-router-dom": "^5.3.4",

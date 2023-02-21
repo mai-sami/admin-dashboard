@@ -1,11 +1,10 @@
 import { lazy } from "react";
 import { BaseLayout } from "../../Layout/BaseLayout";
 import { RouteWrapper } from "../RouteWrapper";
-import Login from "../../Pages/Auth/Login";
-import { Redirect } from "react-router-dom";
-import AuthRouter from "./AuthRouter";
+ import { Redirect } from "react-router-dom";
+  
 
-
+const TransfareList = lazy(() => import("../../Components/TransfareList/TransfareList"));
 const ProfileDetail = lazy(() => import("../../Pages/Home/ProfileDetails/ProfileDetail"));
 const CompanyDetail = lazy(() => import("../../Pages/Home/CompanyDetails/CompanyDetail"));
 const Reports = lazy(() => import("../../Pages/Home/Reports/Reports"));
@@ -41,6 +40,7 @@ function UserRouter() {
       <RouteWrapper path="/company-details" component={CompanyDetail} layout={BaseLayout} />
       <RouteWrapper path="/profile-details" component={ProfileDetail} layout={BaseLayout} />
       <RouteWrapper path="/upload-file" component={UploadFiles} layout={BaseLayout} />
+      <RouteWrapper path="/transfer-list" component={TransfareList} layout={BaseLayout} />
 
 
       <RouteWrapper path="/" exact component={Dashboard} layout={BaseLayout} />

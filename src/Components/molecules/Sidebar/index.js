@@ -23,7 +23,7 @@ function Index() {
         <Sidebar>
             <Link to={"/login"}>
             <Button
-                name={"LOGO HERE"}
+                name={"Logout"}
                 margin={"1rem 1rem 4rem 1rem"}
                 color={"000000"}
                 padding={"1.3"}
