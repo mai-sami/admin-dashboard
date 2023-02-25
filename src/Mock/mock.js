@@ -65,17 +65,17 @@ const DataSidebar = [
     { name: "Data upload", link: "/upload-file" },
 ]
 const ListReports = [
-    { name: "SEBI report", link: "/sebl-report" },
-    { name: "GRI report", link: "/gri-report" },
-    { name: "Customize report", link: "/customize-report" },
+    { name: "SEBI report", link: "sebl-report" },
+    { name: "GRI report", link: "gri-report" },
+    { name: "Customize report", link: "customize-report" },
 ]
 const ListReportSidebar = [
-    { name: "My Report", link: "/my-report" },
+    { name: "My Report", link: "report/my-report" },
 ]
 const ListAnalytics = [
-    { name: "Environment", link: "profile-details" },
-    { name: "Social", link: "social" },
-    { name: "Governance", link: "governance" },
+    { name: "Environment", link: "analytics/analytics" },
+    { name: "Social", link: "analytics/social" },
+    { name: "Governance", link: "analytics/governance" },
 ]
 const ListData = [
     { name: "Company Details" },

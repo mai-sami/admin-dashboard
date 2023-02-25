@@ -10,7 +10,7 @@ function Index() {
     }
     return (
         <Flex flexDirection={"column"} >
-            <img src={Logo} alt={"Logo"} onClick={handelShow} />
+            <img src={Logo} alt={"Logo"} style={{ width: "100%",height:"100%"}} onClick={handelShow} />
             {show ?
                 <Link to={'/profile-details'}>
                     <Button

@@ -9,9 +9,9 @@ function Chart({ DataCharts }) {
             display={"flex"}
             justifyContent={"space-between"}>
             {DataCharts?.map(item => (
-                <Flex alignItems={"flex-start"} flexDirection={"column"}>
+                <Flex key={item.name} alignItems={"flex-start"} flexDirection={"column"}>
                     <Title margin={'1'} name={item.name} />
-                    <img style={{ width: "100%" }} src={item.image} alt="chart" />
+                    <img style={{ width: "100%",height:"100%"}} src={item.image} alt="chart" />
                 </Flex>
             ))}
         </Flex>

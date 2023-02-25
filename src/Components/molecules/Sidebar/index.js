@@ -33,10 +33,10 @@ function Index() {
                 />
                 </Link>
             {DataSidebar.map(item => (
-                <CustomNavLinks name={item.name} url={`${item.link}`} />
+                <CustomNavLinks key={item.name} name={item.name} url={`${item.link}`} />
             ))}
-            <Dropdown text={"Report"} url={"/report"} show={showReport} handelShow={handelShowReports} options={ListReportSidebar} />
-            <Dropdown text={"Analytics"} url={"/analytics"} show={show} handelShow={handelShow} options={ListAnalytics} />
+            <Dropdown text={"Report"} url={"report"} show={showReport} handelShow={handelShowReports} options={ListReportSidebar} />
+            <Dropdown text={"Analytics"} url={"analytics"} show={show} handelShow={handelShow} options={ListAnalytics} />
 
         </Sidebar>
     )

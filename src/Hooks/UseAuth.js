@@ -1,13 +1,13 @@
 import axios from "axios";
 import { useState } from "react";
-import { useHistory } from "react-router-dom";
-import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
+ import { toast } from "react-toastify";
 import API_URL from "./Api";
 
 const UseAuth = () => {
-    const history = useHistory()
-    const [isLoading, setIsLoading] = useState(false);
+     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState('');
+    const navgate=useNavigate()
     const loginAction = async (userData) => {
         try {
             setIsLoading(true);
@@ -23,7 +23,7 @@ const UseAuth = () => {
             })
             localStorage.setItem("user", JSON.stringify(response.data));
             localStorage.setItem('token', response.data.token);
-            history.push('/')
+            navgate('/')
 
         }
         catch (e) {
@@ -37,8 +37,7 @@ const UseAuth = () => {
                 closeButton: true,
             })
             setError(e.message);
-            console.log(e.message)
-            history.push('/login')
+            navgate('/login')
         }
     }
     const RegisterAction = async (userData) => {
@@ -55,7 +54,7 @@ const UseAuth = () => {
                 timeOut: 5000,
                 closeButton: true
             })
-            history.push('/login')
+            navgate('/login')
 
         }
         catch (e) {
@@ -70,7 +69,7 @@ const UseAuth = () => {
 
             })
             setError(e.message);
-            history.push('/register')
+            navgate('/register')
         }
     }
     return { loginAction, isLoading, RegisterAction, error }

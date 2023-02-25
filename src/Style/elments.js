@@ -108,7 +108,6 @@ export const P = styled.p`
 padding:1rem;
  width:${({ width }) => width};
  text-align: left;
-
 `
 export const Image = styled.img`
  margin:.3rem;

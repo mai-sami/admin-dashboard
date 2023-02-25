@@ -1,12 +1,11 @@
 import React from 'react'
-import { useHistory } from 'react-router-dom'
-import notFound from '../assets/Group 491.png'
+import { Navigate } from 'react-router-dom'
+ import notFound from '../assets/Group 491.png'
 import Button from '../Components/atoms/Buttons/Button'
 import { Image } from '../Style/elments'
 import { Flex } from '../Style/layout'
 function NotFound() {
-    const history = useHistory()
-    return (
+     return (
         <Flex
             flexDirection={"column"}
             margin={"4rem 0rem 0rem 0rem "}>
@@ -16,7 +15,7 @@ function NotFound() {
                 margin={"5rem"}
                 height={"55px"}
                 width={"200px"}
-                onClick={() => history.push("/")}
+                onClick={<Navigate to={'/'} />}
             />
         </Flex>
     )

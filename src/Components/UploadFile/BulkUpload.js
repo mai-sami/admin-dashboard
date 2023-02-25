@@ -9,7 +9,6 @@ function BulkUpload() {
 
     const handleUpload = (e) => {
         const file = e.target.files[0];
-        console.log();
         const formData = new FormData();
         formData.append(file.name, file);
         formData.forEach((file) => setFiles([...files, file]));

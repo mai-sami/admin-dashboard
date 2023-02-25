@@ -37,7 +37,7 @@ function Index() {
                     return "Transfer List";
                 
             default:
-                return "Add Name of Page in another case";
+                return "Analytics";
         }
     }
     return (

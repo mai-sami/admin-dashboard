@@ -1,9 +1,9 @@
 import React from 'react'
 import { NavLinkS } from './style'
 
-function CustomNavLinks({ name, url }) {
+function CustomNavLinks({name, url }) {
     return (
-        <NavLinkS activeClassName={"active"} to={url}>
+        <NavLinkS  activeClassName={"active"} to={url}>
             {name}
         </NavLinkS>
     )

@@ -15,7 +15,7 @@ function CustomInputForms({
     background, display,
     LineHeight, children,
     padding, DataFeild,
-    width, margin, actionApi, url }) {
+    width, margin, actionApi }) {
 
     const yupList = {};
     DataFeild.forEach((item) => {
@@ -45,7 +45,7 @@ function CustomInputForms({
                     <Div
                         justifyContent={"unset"}
                         alignItems={"unset"}
-                        width={width}>
+                        width={width} key= {item.name}>
                         <InputForms
                             LineHeight={LineHeight}
                             text={item.text}

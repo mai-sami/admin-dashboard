@@ -13,7 +13,7 @@
     "react-dual-listbox": "^5.0.2",
     "react-hook-form": "^7.43.1",
     "react-loader-spinner": "^5.3.4",
-    "react-router-dom": "^5.3.4",
+    "react-router-dom": "^6.8.1",
     "react-scripts": "5.0.1",
     "react-toastify": "^9.1.1",
     "source-map-loader": "^4.0.1",
