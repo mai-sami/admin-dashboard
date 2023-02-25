@@ -1,6 +1,18 @@
-*{
-  margin: 0;
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css);
+* {
+   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
+
+.links {
+  text-decoration: none;
+  margin: 1rem 0 0.7rem 0;
+}
+
+.active {
+  font-weight: bolder !important;
+  font-size: 21px !important;
+  color: #000000 !important;
+}
+ 
