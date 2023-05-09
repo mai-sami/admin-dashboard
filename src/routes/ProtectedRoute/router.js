@@ -11,7 +11,7 @@ const Verification = lazy(() => import("../../Pages/Auth/Verification"));
 const Verified = lazy(() => import("../../Pages/Auth/Verified"));
 
 
-const TransfareList = lazy(() => import("../../Components/TransfareList/TransfareList"));
+const TransfareList = lazy(() => import("../../Components/organisms/TransfareList/TransfareList"));
 const ProfileDetail = lazy(() => import("../../Pages/Home/ProfileDetails/ProfileDetail"));
 const CompanyDetail = lazy(() => import("../../Pages/Home/CompanyDetails/CompanyDetail"));
 const Reports = lazy(() => import("../../Pages/Home/Reports/Reports"));
