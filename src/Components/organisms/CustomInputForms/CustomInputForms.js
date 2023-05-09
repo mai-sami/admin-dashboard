@@ -7,7 +7,7 @@ import { Form } from '../../../Style/elments'
 import { Div } from '../../../Style/layout';
 import * as yup from "yup";
 import Title from '../../atoms/Titles/Title';
- 
+
 function CustomInputForms({
     nameButton, border,
     TitleName, widthForm,
@@ -45,7 +45,7 @@ function CustomInputForms({
                     <Div
                         justifyContent={"unset"}
                         alignItems={"unset"}
-                        width={width} key= {item.name}>
+                        width={width} key={item.name}>
                         <InputForms
                             LineHeight={LineHeight}
                             text={item.text}
@@ -59,10 +59,10 @@ function CustomInputForms({
                 {children}
                 <Div width={"100%"}
                     display={"flex"}>
-                        <Button
-                            name={nameButton}
-                            margin={"2rem"}
-                        />
+                    <Button
+                        name={nameButton}
+                        margin={"2rem"}
+                    />
                 </Div>
                 {AnckorText}
             </Form>
